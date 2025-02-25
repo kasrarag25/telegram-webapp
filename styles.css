@@ -1,56 +1,89 @@
-/* استایل‌ها برای صفحه بازی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f1f1f1;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    flex-direction: column;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.button {
-    background-color: #3498db;
-    color: white;
-    font-size: 1.5rem;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #2980b9;
-}
-
-.score {
-    font-size: 1.5rem;
-    margin-top: 20px;
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
 }
 
 .loading {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
+    justify-content: space-between;
+    width: 50px;
 }
 
-.loading h2 {
-    font-size: 1.5rem;
-    color: #3498db;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    animation: loading 1.2s infinite ease-in-out;
 }
 
-/* نمایش بازی بعد از لود */
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
 .game-container {
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
+button {
+    padding: 15px 25px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008c99;
+}
