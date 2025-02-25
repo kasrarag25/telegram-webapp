@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازی کلیکی نات کوین</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ربات بازی</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="loading" id="loading">
-        <h2>در حال بارگذاری...</h2>
-    </div>
-
-    <div class="game-container" id="game-container" style="display: none;">
-        <h1>بازی کلیکی نات کوین</h1>
-        <button class="button" onclick="addCoin()">کلیک کنید!</button>
-        <div class="score">
-            امتیاز شما: <span id="score">0</span>
+    <div class="loading-container">
+        <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
+    </div>
+    
+    <div id="game-container" class="game-container" style="display:none;">
+        <button id="start-button" onclick="startGame()">شروع بازی</button>
     </div>
 
     <script src="script.js"></script>
