@@ -1,15 +1,11 @@
-let score = 0;
+window.onload = function() {
+    setTimeout(function() {
+        document.querySelector('.loading-container').style.display = 'none'; // مخفی کردن لودینگ
+        document.getElementById('game-container').style.display = 'block'; // نمایش دکمه بازی
+    }, 5000); // پس از 5 ثانیه
+};
 
-// نمایش بازی بعد از 5 ثانیه
-window.onload = () => {
-    setTimeout(() => {
-        document.getElementById("loading").style.display = "none"; // مخفی کردن لودینگ
-        document.getElementById("game-container").style.display = "block"; // نمایش بازی
-    }, 5000); // 5 ثانیه لودینگ
-}
-
-// افزایش امتیاز
-function addCoin() {
-    score += 1;
-    document.getElementById('score').textContent = score;
+function startGame() {
+    // تابعی که بعد از کلیک روی دکمه "شروع بازی" اجرا می‌شود.
+    window.location.href = "https://yourgameurl.com";  // لینک به صفحه بازی
 }
