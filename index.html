@@ -3,50 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لودینگ...</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .loader {
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid #3498db;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .message {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
+    <title>بازی کلیکی نات کوین</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <div class="loader"></div>
-        <div class="message">در حال بارگذاری، لطفا منتظر بمانید...</div>
+    <div class="loading" id="loading">
+        <h2>در حال بارگذاری...</h2>
     </div>
 
-    <script>
-        // بعد از 5 ثانیه به صفحه بازی هدایت می‌شود
-        setTimeout(function() {
-            window.location.href = "https://kasrarag25.github.io/telegram-webapp";  // لینک صفحه بازی شما
-        }, 5000); // 5000 میلی‌ثانیه یعنی 5 ثانیه
-    </script>
+    <div class="game-container" id="game-container" style="display: none;">
+        <h1>بازی کلیکی نات کوین</h1>
+        <button class="button" onclick="addCoin()">کلیک کنید!</button>
+        <div class="score">
+            امتیاز شما: <span id="score">0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
